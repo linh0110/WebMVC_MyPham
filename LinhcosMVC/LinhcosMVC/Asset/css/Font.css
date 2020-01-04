@@ -1,0 +1,12 @@
+﻿@import url("bootstrap.min.cs");
+body {
+    font-family:Tahoma;
+}
+.banner-title {
+    color: white;
+    padding-left:20px;
+}
+.nav-link{
+    color:#808080;
+    text-decoration:none;
+    }

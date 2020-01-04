@@ -1,0 +1,42 @@
+﻿@model IEnumerable<LinhcosMVC.Models.TinTuc>
+@{
+    ViewBag.Title = "IndexTinTuc";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            <div>
+                <br/>
+                <h2 style="font:bold">Beauty Tips/Review</h2>
+                <br/>
+            </div>
+            @foreach (var tin in Model)
+            {
+                <div style="float:left; width:100%; padding:0px 0px 25px 0px;">
+                    <div style="float:left; width:25%;">
+                        <a href="@Url.Action("ChiTietTT","TinTuc",new { matin = tin.MaTin })">
+                            <img src="~/Asset/Pic/hinhTinTuc/@tin.HinhMinhHoa" style="width:200px; height:200px" />
+                            </a>
+                    </div>
+                    <div style="float:left; height:100px; width:75%;">
+                        <h2 style="font:bold;">@tin.TieuDeTin</h2>
+                        <h6 style="color:#c5c1c1">Ngày Đăng: @tin.NgayDang</h6>
+                        <h6 style="color:#c5c1c1">Lần xem: @tin.LanXem</h6>
+                        <h5>@tin.NoiDungTin</h5>
+                       
+                    </div>
+                </div>
+                <br/>
+                <br/>
+            }
+        </div>
+        <div class="col-lg-3">  
+            @Html.Action("TinTucMoiNhat","TinTuc");
+        </div> 
+    </div>
+
+</div>
+
+

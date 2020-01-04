@@ -1,0 +1,82 @@
+﻿@model IEnumerable<LinhcosMVC.Models.SanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="col-lg-3">
+                <ul id="menu">
+                    <li><a href="#">Mắt</a></li>
+                    <li><a href="#">Môi</a></li>
+                    <li><a href="#">Da</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                    <li><a href="#">Sữa rửa mặt</a></li>
+                    <li><a href="#">Tẩy trang</a></li>
+                    <li><a href="#">Dưỡng da</a></li>
+                    <li><a href="#">Mặt nạ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="row">
+                @foreach (var sp in Model)
+                {
+                    <div class="col-lg-3" style="padding:10px 15px 0px 10px; background-color:#ffffff">
+                        <div>
+                            <a href="@Url.Action("Details","SanPham",new { masp = sp.MaSP })">
+                                <img src="~/Asset/Pic/HinhSP/@sp.Hinh" style="width:195px; height:195px;" />
+                            </a>
+                        </div>
+                        <div>
+                            <a>@sp.TenSP</a>
+                            <br />
+                            <a>Giá:@sp.Gia</a>
+                        </div>
+                        <div class="ratings">
+                            <p class="pull-right" style="font-style:oblique">20 reviews</p>
+                            <p>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <style>
+        #menu ul {
+            background: #8AD385;
+            width: 250px;
+            padding: 0;
+            list-style-type: none;
+            text-align: left;
+        }
+
+        #menu li {
+            width: 200px;
+            height: auto;
+            line-height: 40px;
+            border-bottom: 1px solid #e8e8e8;
+            padding: 0 1em;
+            display: inline-block;
+        }
+
+            #menu li a {
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+                display: block;
+            }
+
+            #menu li:hover {
+                background: #CDE2CD;
+            }
+    </style>
+</div>

@@ -1,0 +1,82 @@
+﻿@using LinhcosMVC.Models;
+
+@{
+    var ten = Session["Taikhoanadmin"] as LinhcosMVC.Models.Admin;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head xmlns="http://www.w3.org/1999/xhtml">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Asset/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Asset/css/CssLayout.css" rel="stylesheet" />
+    <link href="~/Asset/css/Font.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div style="height:50px; background-color:#000000; text-align:center;">
+                        <a style="font-weight:bold;color:white">Admin: @ten.HoTenn</a>
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.ValidationSummary(true)
+                            <div>
+                                @Html.ActionLink("Đăng xuất", "Login", "Admin")
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <ul id="menu">
+                    <li><a href="@Url.Action("SanPham","Admin")">Quản lí sản phẩm</a></li>
+                    <li><a href="#">Quản lí tin tức<a></li>
+                    <li><a href="#">Quản lí khách hàng</a></li>
+                    <li><a href="#">Quản lí giỏ hàng</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    @RenderBody()
+            </div>
+        </div>
+    </div>
+    <style>
+        #menu ul {
+            background: #8AD385;
+            width: 250px;
+            padding: 0;
+            list-style-type: none;
+            text-align: left;
+        }
+
+        #menu li {
+            width: auto;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #e8e8e8;
+            padding: 0 1em;
+            display:inline-block;
+        }
+
+            #menu li a {
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+                display: block;
+            }
+
+            #menu li:hover {
+                background: #CDE2CD;
+            }
+    </style>
+</body>
+</html>

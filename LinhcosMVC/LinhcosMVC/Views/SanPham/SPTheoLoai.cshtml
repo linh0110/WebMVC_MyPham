@@ -1,0 +1,35 @@
+﻿@model IEnumerable<LinhcosMVC.Models.LoaiSP>
+@{
+    ViewBag.Title = "SanPhamTheoDM";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<p class="lead">MAKE UP</p>
+  <div class="col-lg-9">
+            <div class="row">
+                @foreach (var sp in Model)
+                {
+                    <div class="col-lg-3" style="padding:10px 15px 0px 10px; background-color:#ffffff">
+                        <div>
+                            <a href="@Url.Action("Details","SanPham",new { masp = sp.MaSP })">
+                                <img src="~/Asset/Pic/HinhSP/@sp.Hinh" style="width:195px; height:195px;" />
+                            </a>
+                        </div>
+                        <div>
+                            <a>@sp.TenSP</a>
+                            <br />
+                            <a>Giá:@sp.Gia</a>
+                        </div>
+                        <div class="ratings">
+                            <p class="pull-right" style="font-style:oblique">20 reviews</p>
+                            <p>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>

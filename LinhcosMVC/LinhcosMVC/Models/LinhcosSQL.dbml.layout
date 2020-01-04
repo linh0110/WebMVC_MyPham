@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 11.25" name="LinhcosSQL">
+  <DataContextMoniker Name="/LinhcosSQLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="eb7cd51a-a604-4708-a2b0-953d5e700889" absoluteBounds="8.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/LinhcosSQLDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91e53c84-bc64-48e3-a0d7-80a9aeafcf88" absoluteBounds="8.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10e57610-c63a-4603-a798-ed3338f629f3" absoluteBounds="9, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LinhcosSQLDataContext/ChiTietDonHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99fffd28-027c-4a2e-9285-de82afa2c27f" absoluteBounds="9.015, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60a64716-21ef-420f-8d60-970bba962c51" absoluteBounds="0.75, 1.5, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/LinhcosSQLDataContext/DanhMuc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1a9e2a2-c511-444e-84cb-e90c28aa9b56" absoluteBounds="0.765, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20b38c07-245d-4145-be65-383140f5ffa2" absoluteBounds="6.25, 5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LinhcosSQLDataContext/DonDatHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd99b253-72e6-4916-9049-72b4a475b4b4" absoluteBounds="6.265, 5.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60758d2d-1f0c-41da-8fdc-6cf0f27b6221" absoluteBounds="3.5, 4.875, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/LinhcosSQLDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97a888cc-eaf9-4a48-a8ba-1f8edf2e967a" absoluteBounds="3.515, 5.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b28584f8-c905-4dcb-9836-9fc415eecdc7" absoluteBounds="6.25, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/LinhcosSQLDataContext/SanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a576c933-af95-4a0d-85ae-479c59e91ee6" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc77891b-3914-4c32-80d9-2e5c472f8608" absoluteBounds="3.5, 8.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LinhcosSQLDataContext/TinTuc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6bc307f0-c4e3-46de-a052-a3abea57758b" absoluteBounds="3.515, 9.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c3b95803-2124-4352-9c54-e18790cc6bed" absoluteBounds="0.75, 9.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LinhcosSQLDataContext/TheLoaiTinTuc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c193ed68-8f4b-499b-9935-7442c87f9aa7" absoluteBounds="0.765, 9.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c6224341-bf59-42b6-8dc7-4f28d9f9d117" absoluteBounds="3.5, 1.375, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/LinhcosSQLDataContext/LoaiSP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de7da212-f058-4903-bb70-abe0ff02af7b" absoluteBounds="3.515, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 6.17714680989583); (10.90625 : 6.17714680989583); (10.90625 : 2.95359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinhcosSQLDataContext/DonDatHang/DonDatHang_ChiTietDonHang" />
+      <nodes>
+        <classShapeMoniker Id="20b38c07-245d-4145-be65-383140f5ffa2" />
+        <classShapeMoniker Id="10e57610-c63a-4603-a798-ed3338f629f3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.07774983723958); (6.25 : 6.07774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinhcosSQLDataContext/KhachHang/KhachHang_DonDatHang" />
+      <nodes>
+        <classShapeMoniker Id="60758d2d-1f0c-41da-8fdc-6cf0f27b6221" />
+        <classShapeMoniker Id="20b38c07-245d-4145-be65-383140f5ffa2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.16429768880208); (9 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinhcosSQLDataContext/SanPham/SanPham_ChiTietDonHang" />
+      <nodes>
+        <classShapeMoniker Id="b28584f8-c905-4dcb-9836-9fc415eecdc7" />
+        <classShapeMoniker Id="10e57610-c63a-4603-a798-ed3338f629f3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.97199625651042); (3.5 : 9.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinhcosSQLDataContext/TheLoaiTinTuc/TheLoaiTinTuc_TinTuc" />
+      <nodes>
+        <classShapeMoniker Id="c3b95803-2124-4352-9c54-e18790cc6bed" />
+        <classShapeMoniker Id="cc77891b-3914-4c32-80d9-2e5c472f8608" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.06814697265625); (6.25 : 2.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinhcosSQLDataContext/LoaiSP/LoaiSP_SanPham" />
+      <nodes>
+        <classShapeMoniker Id="c6224341-bf59-42b6-8dc7-4f28d9f9d117" />
+        <classShapeMoniker Id="b28584f8-c905-4dcb-9836-9fc415eecdc7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.09699625651042); (3.5 : 2.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinhcosSQLDataContext/DanhMuc/DanhMuc_LoaiSP" />
+      <nodes>
+        <classShapeMoniker Id="60a64716-21ef-420f-8d60-970bba962c51" />
+        <classShapeMoniker Id="c6224341-bf59-42b6-8dc7-4f28d9f9d117" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

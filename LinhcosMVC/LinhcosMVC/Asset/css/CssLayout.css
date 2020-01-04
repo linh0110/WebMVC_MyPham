@@ -1,0 +1,48 @@
+﻿@import url("bootstrap.min.cs");
+
+body {
+    width: auto;
+}
+
+* {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.container {
+    width: 2000px;
+}
+
+.banner-title {
+    height: 40px;
+    padding: 8px 0px;
+    background-color: #343a40;
+}
+
+.banner-logo img {
+    width: 400px;
+    height: 207px;
+    padding:10px;
+    text-align:center;
+}
+
+.btn-outline-dark {
+	border-color: #FFF;
+    background-color:#29293d;
+	color: #FFF;
+}
+.btn-outline-dark:hover {
+	border-color: #343a40;	
+}
+
+/*Home*/
+.carousel-control-prev-icon {
+     background-image: url(../images/previous-32.png);
+     width: 32px;
+     height: 32px;
+}
+ .carousel-control-next-icon {
+     background-image: url(../images/next-32.png);
+     width: 32px;
+     height: 32px;
+}

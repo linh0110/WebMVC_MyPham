@@ -1,0 +1,89 @@
+﻿@model LinhcosMVC.Models.SanPham
+
+@{
+    ViewBag.Title = "ThemMoiSP";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>ThemMoiSP</h2>
+@*Them thuoc tinh cho form de upload hinh anh*@
+@using (Html.BeginForm("ThemMoiSP", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>SanPham</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TenSP)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TenSP)
+            @Html.ValidationMessageFor(model => model.TenSP)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Hinh)
+            
+        </div>
+        <div class="editor-field">
+            @*@Html.EditorFor(model => model.Hinh)
+        @Html.ValidationMessageFor(model => model.Hinh)*@
+            <input type="file" name="fileupload" />
+            @ViewBag.ThongBao
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MaLoaiSP)
+        </div>
+        <div class="editor-field">
+            @*@Html.EditorFor(model => model.MaLoaiSP)
+            @Html.ValidationMessageFor(model => model.MaLoaiSP)*@
+            <div>
+                @Html.DropDownList("MaLoaiSP");
+            </div>
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Thuonghieu)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Thuonghieu)
+            @Html.ValidationMessageFor(model => model.Thuonghieu)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Mota)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Mota)
+            @Html.ValidationMessageFor(model => model.Mota)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SoLuongCon)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SoLuongCon)
+            @Html.ValidationMessageFor(model => model.SoLuongCon)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Gia)
+            @Html.ValidationMessageFor(model => model.Gia)
+        </div>
+
+        <p>
+            <input class="btn btn-outline-dark" type="submit" value="Thêm" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "SanPham")
+</div>

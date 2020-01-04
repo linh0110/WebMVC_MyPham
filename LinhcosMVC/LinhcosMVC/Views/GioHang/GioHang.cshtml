@@ -1,0 +1,43 @@
+﻿@using LinhcosMVC.Models;
+@model List<Giohang>
+
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2 style="text-align:center">Thông tin giỏ hàng</h2>
+
+<table align="center" border="1">
+    <tr style="text-align:center; font-weight:bold">
+        <td>Mã sản phẩm</td>
+        <td>Tên sản phẩm</td>
+        <td>Ảnh sản phẩm</td>
+        <td>Số lượng</td>
+        <td>Đơn giá</td>
+        <td>Thành tiền</td>
+        <td></td>
+        <td></td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.sMaSP</td>
+            <td>@item.sTenSP</td>
+            <td><img src="~/Asset/Pic/HinhSP/@item.sHinh" style="width:100px;height:100px;" /></td>
+            <td>@item.iSoLuong</td>
+            <td>@item.dGia</td>
+            <td>@item.dThanhTien</td>
+            <td><a href="@Url.Action("Details","SanPham",new { masp = item.sMaSP})">Chi Tiết</a></td>
+            <td>@Html.ActionLink("Xóa", "Xoagiohang", new { sMaSP = item.sMaSP })</td>
+        </tr>
+    }
+    <tr style="font-weight:bold; text-align:right; color:red">
+        <td colspan="4">Số lượng sản phẩm: @ViewBag.TongSoLuong</td>
+        <td colspan="4">Tổng tiền: @ViewBag.Tongtien VND</td>
+    </tr>
+    <tr style="font-weight:bold; text-align:right; color:blue">
+        <td colspan="8" style="text-align:center">@Html.ActionLink("Đặt hàng","Dathang","GioHang")</td>
+    </tr>
+    @Html.ActionLink("Tiếp tục mua", "Index", "SanPham")
+</table>

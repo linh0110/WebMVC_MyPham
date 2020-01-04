@@ -1,0 +1,108 @@
+﻿@model LinhcosMVC.Models.SanPham
+
+@{
+    ViewBag.Title = "ChiTietSP";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-weight:bold">Chi Tiết Sản Phẩm</h2>
+<fieldset>
+    <table>
+        <tr>
+            <td style="width:200px">
+                <div class="display-label" style="font-weight:bold">
+                    @*@Html.DisplayNameFor(model => model.TenSP)*@
+                    Tên sản phẩm:
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.TenSP)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label" style="font-weight:bold">
+                    @*@Html.DisplayNameFor(model => model.Hinh)*@
+                    Hình:
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @*@Html.DisplayFor(model => model.Hinh)*@
+                    <img src="@Url.Content("~/Asset/Pic/HinhSP/"+Model.Hinh)" style="width:300px;height:300px" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label" style="font-weight:bold">
+                    @*@Html.DisplayNameFor(model => model.MaLoaiSP)*@
+                    Tên Loại Sản Phẩm:
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.LoaiSP.TenLoai)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label" style="font-weight:bold">
+                    @*@Html.DisplayNameFor(model => model.Thuonghieu)*@
+                    Thương hiệu:
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Thuonghieu)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label" style="font-weight:bold">
+                    @*@Html.DisplayNameFor(model => model.Mota)*@
+                    Mô tả:
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Mota)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label" style="font-weight:bold">
+                    @*@Html.DisplayNameFor(model => model.SoLuongCon)*@
+                    Số lượng còn:
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SoLuongCon)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label" style="font-weight:bold">
+                    @*@Html.DisplayNameFor(model => model.Gia)*@
+                    Giá:
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Gia)
+                </div>
+            </td>
+        </tr>
+         </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.MaSP }) ||
+    @Html.ActionLink("Quay lại danh sách", "SanPham")
+</p>

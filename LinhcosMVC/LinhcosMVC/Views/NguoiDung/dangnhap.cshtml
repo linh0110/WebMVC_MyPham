@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "DangNhap";
+    Layout = null;
+}
+@{
+    var ten = Session["TaiKhoan"] as LinhcosMVC.Models.KhachHang;
+    if (Session["TaiKhoan"] != null)
+    { Session["TaiKhoan"] = null; }
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Login Customer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="~/Asset/Login_v16/images/icons/favicon.ico" />
+        <!--===============================================================================================-->
+        <link href="~/Asset/Login_v16/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        <link href="~/Asset/Login_v16/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        <link href="~/Asset/Login_v16/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        <link href="~/Asset/Login_v16/vendor/animate/animate.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        <link href="~/Asset/Login_v16/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        <link href="~/Asset/Login_v16/vendor/animsition/css/animsition.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        <link href="~/Asset/Login_v16/vendor/select2/select2.min.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        <link href="~/Asset/Login_v16/vendor/daterangepicker/daterangepicker.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+        <link href="~/Asset/Login_v16/css/util.css" rel="stylesheet" />
+        <link href="~/Asset/Login_v16/css/main.css" rel="stylesheet" />
+        <!--===============================================================================================-->
+    </head>
+    <body>
+        <h4 style="color:red;text-align:center">@ViewBag.ThongBao</h4>
+        <div class="limiter">
+            <div class="container-login100" style="background-image: linear-gradient(to bottom left,#e14eca,#ba54f5,#e14eca);">
+                <div class="wrap-login100 p-t-30 p-b-50">
+                    <span class="login100-form-title p-b-41">
+                        Account Login
+                    </span>
+             
+                    <form class="login100-form validate-form p-b-33 p-t-5">
+                        <div>
+
+                            <div class="wrap-input100 validate-input" data-validate="Enter username">
+                                <input class="input100" type="text" name="username" placeholder="User name...">
+                                <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                                @ViewData["Loi1"]
+                            </div>
+
+                            <div class="wrap-input100 validate-input" data-validate="Enter password">
+                                <input class="input100" type="password" name="password" placeholder="Password...">
+                                <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+                                @ViewData["Loi2"]
+                            </div>
+
+                            <div class="container-login100-form-btn m-t-32">
+                                <button type="submit" class="login100-form-btn">
+                                    Login
+                                </button>
+                            </div>
+                            <br />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div id="dropDownSelect1"></div>
+
+        <!--===============================================================================================-->
+        <script src="~/Asset/Login_v16/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/Asset/Login_v16/vendor/animsition/js/animsition.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/Asset/Login_v16/vendor/bootstrap/js/popper.js"></script>
+        <script src="~/Asset/Login_v16/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/Asset/Login_v16/vendor/select2/select2.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/Asset/Login_v16/vendor/daterangepicker/moment.js"></script>
+        <script src="~/Asset/Login_v16/vendor/daterangepicker/daterangepicker.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/Asset/Login_v16/vendor/countdowntime/countdowntime.js"></script>
+        <!--===============================================================================================-->
+        <script src="~/Asset/Login_v16/js/main.js"></script>
+
+    </body>
+</html>
+
+}
